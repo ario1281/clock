@@ -5,7 +5,7 @@ async function hander(request) {
   console.log({ pathName, searchParams: [...searchParams.entries()] });
 
   if (pathName === "/") {
-    return new Responce(await Deno.readFile("./template.html"), {
+    return new Response(await Deno.readFile("./template.html"), {
       headers: { "Content-type": "text/html" },
     })
   }
