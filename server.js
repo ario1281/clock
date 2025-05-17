@@ -10,6 +10,10 @@ async function hander(request) {
     })
   }
 
+  if (pathName === "/api") {
+    return api_handler(searchParams);
+  }
+
   return new Response("404 Not Found", {
     status: 404,
     statusText: "Not Found",
