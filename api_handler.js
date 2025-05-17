@@ -7,22 +7,13 @@ export const api_headers = new Headers({
 });
 
 export function api_handler(searchParams) {
-  const errRes = (msg) => {
-    return new Response(
-      Svg.error(msg),
-      {
-        status: 400,
-        headers: api_headers,
-      },
-    );
-  };
 
   const params = new CustomURLSearchParams(searchParams);
-
+  
   const width = params.get("width");
 
   return new Response(
-    Svg.render({}),
+    Svg.render({ width }),
     {
       status: 200,
       headers: api_headers,
