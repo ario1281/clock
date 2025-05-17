@@ -4,7 +4,7 @@ export class CustomURLSearchParams extends URLSearchParams {
   getString(key, defaultValue = "") {
     return super.get(key)?.toString() ?? defaultValue;
   }
-  getNumber(key, defaultValue = 0): {
+  getNumber(key, defaultValue = 0) {
     const parsedValue = parseInt(this.getString(key));
     return !isNaN(parsedValue) ? parsedValue : defaultValue;
   }
