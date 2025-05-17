@@ -2,7 +2,7 @@
 // id of the clock face.
 // DONT CHANGE THIS UNLESS YOU KNOW WHAT YOU ARE DOING!
 const WRAP_ID = 'clock_wrapper';
-const DRAW_ID = 'dw_clock_object';
+const _DRAW_ID = 'dw_clock_object';
 
 const CLOCK_STYLE = 'clock_style';
 const CLOCK_DATE  = 'clock_date';
