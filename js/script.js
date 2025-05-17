@@ -112,7 +112,8 @@ addEventListener('load', () => {
         create_dials() {
             const dials = document.createElement('div');
             dials.classList.add('dials');
-            for (var i = 1; i <= 12; i++) {
+            let i = 0;
+            for (i = 1; i <= 12; i++) {
                 const elem = document.createElement('div');
                 elem.classList.add(i);
                 elem.style.transform = `rotate(${i * 30}deg)`;
@@ -138,7 +139,7 @@ addEventListener('load', () => {
             // resize height
             height = `${this.m_eTime.scrollWidth * 0.75}px`;
             this.m_eTime.style.height = height;
-            window.addEventListener('resize', () => {
+            addEventListener('resize', () => {
                 height = `${this.m_eTime.scrollWidth * 0.75}px`;
                 this.m_eTime.style.height = height;
             });
@@ -147,7 +148,7 @@ addEventListener('load', () => {
                 // update animation
                 this.animation_hands();
 
-                window.addEventListener('resize', () => {
+                addEventListener('resize', () => {
                     const elem = document.querySelector(`#${WRAP_ID}`);
                     if (elem.checkVisibility()) { return; }
 
@@ -238,7 +239,8 @@ addEventListener('load', () => {
             tens_elem.classList.add('tens');
             ones_elem.classList.add('ones');
 
-            for (var i = 0; i < 4; i++) {
+            let i = 0;
+            for (i = 0; i < 4; i++) {
                 const elem = document.createElement('div');
                 elem.classList.add('dial');
                 elem.style.visibility = 'hidden';
@@ -266,7 +268,8 @@ addEventListener('load', () => {
             const tens = this.number_place(time, 2).toString(2).padStart(4, '0');
             const ones = this.number_place(time, 1).toString(2).padStart(4, '0');
 
-            for (var i = 0; i < 4; i++) {
+            let i = 0;
+            for (i = 0; i < 4; i++) {
                 const ten = tens_elem.childNodes[i];
                 const one = ones_elem.childNodes[i];
 
