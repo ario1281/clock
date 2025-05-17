@@ -1,0 +1,202 @@
+@import url("base.css");
+
+/**
+ + header selector
+**/
+header {
+  background-color: red;
+}
+
+/**
+ + aside selector
+**/
+aside {
+  background-color: yellow;
+}
+
+/**
+ + footer selector
+**/
+footer {
+  background-color: greenyellow;
+}
+
+
+#clock_wrapper {
+  /* base style */
+  padding: 0;
+  border: 2px solid gray;
+  text-align: center;
+  border-radius: 2px;
+
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+}
+
+/*
+ * Clock styling
+** */
+#clock_wrapper #dw_clock_object {
+  display: block;
+  min-width: 10em;
+  zoom: 200%;
+  margin: 0 auto;
+  padding: 4px;
+  line-height: 1.2;
+  letter-spacing: 0.1em;
+}
+
+#clock_wrapper #dw_clock_object .clock_date {
+  font-size: calc(24px * 0.52);
+}
+
+
+/* style of digital clock */
+#clock_wrapper #dw_clock_object .clock_time.digital {
+  font-size: 24px;
+}
+
+
+/* style of analog clock */
+#clock_wrapper #dw_clock_object .clock_time.analog {
+  position: relative;
+  margin: 15px auto;
+  max-width: 700px;
+}
+
+#clock_wrapper #dw_clock_object .clock_time.analog::after {
+  content: "";
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  top: calc(50% - 14px / 2);
+  left: calc(50% - 14px / 2);
+  border-radius: 50%;
+}
+
+/* dials styling */
+#clock_wrapper #dw_clock_object .clock_time.analog .dials {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+#clock_wrapper #dw_clock_object .clock_time.analog .dials>div {
+  position: absolute;
+  width: 6px;
+  height: 50%;
+  top: 0;
+  left: calc(50% - 6px / 2);
+  transform-origin: bottom;
+}
+
+#clock_wrapper #dw_clock_object .clock_time.analog .dials>div::after {
+  content: "";
+  position: absolute;
+  width: 6px;
+  height: 15px;
+  top: 0;
+  left: calc(50% - 6px / 2);
+}
+
+/* hands styling */
+#clock_wrapper #dw_clock_object .clock_time.analog .hand {
+  position: absolute;
+  bottom: 50%;
+  transform-origin: 50% 100%;
+  border-radius: 5em;
+}
+
+#clock_wrapper #dw_clock_object .clock_time.analog .hand.hour {
+  width: 3px;
+  /* 線幅 */
+  height: 30%;
+  /* 線長 */
+  left: calc(50% - 3px / 2);
+}
+
+#clock_wrapper #dw_clock_object .clock_time.analog .hand.minute {
+  width: 3px;
+  /* 線幅 */
+  height: 45%;
+  /* 線長 */
+  left: calc(50% - 3px / 2);
+}
+
+#clock_wrapper #dw_clock_object .clock_time.analog .hand.second {
+  width: 1.5px;
+  /* 線幅 */
+  height: 55%;
+  /* 線長 */
+  left: calc(50% - 1.5px / 2);
+}
+
+/* style of binary clock */
+#clock_wrapper #dw_clock_object .clock_time.binary {
+  display: flex;
+}
+
+#clock_wrapper #dw_clock_object .clock_time.binary>div {
+  display: inherit;
+  flex-direction: row;
+  margin: auto;
+}
+
+#clock_wrapper #dw_clock_object .clock_time.binary>div>.ones,
+#clock_wrapper #dw_clock_object .clock_time.binary>div>.tens {
+  display: inherit;
+  flex-direction: column;
+}
+
+#clock_wrapper #dw_clock_object .clock_time.binary>div>.ones .dial,
+#clock_wrapper #dw_clock_object .clock_time.binary>div>.tens .dial {
+  display: inherit;
+  width: 2.5em;
+  height: 2.5em;
+  margin: 2.5px;
+}
+
+
+#clock_wrapper.neon {
+  /* variables */
+  /* base style */
+  background-color: #15151e;
+}
+
+#clock_wrapper.neon #dw_clock_object {
+  font-family: "Share Tech Mono", monospace;
+  color: #d9ecff;
+  text-shadow: 0 0 20px #0aafe6;
+}
+
+/* style of analog clock */
+#clock_wrapper.neon #dw_clock_object .clock_time.analog::after {
+  background-color: #d9ecff;
+  box-shadow: 0 0 20px #0aafe6;
+}
+
+/* dials styling */
+#clock_wrapper.neon #dw_clock_object .clock_time.analog .dials>div::after {
+  background-color: #d9ecff;
+  box-shadow: 0 0 20px #0aafe6;
+}
+
+/* hands styling */
+#clock_wrapper.neon #dw_clock_object .clock_time.analog .hand.hour,
+#clock_wrapper.neon #dw_clock_object .clock_time.analog .hand.minute {
+  background-color: #d9ecff;
+  box-shadow: 0 0 20px #0aafe6;
+}
+
+#clock_wrapper.neon #dw_clock_object .clock_time.analog .hand.second {
+  background-color: #000;
+  box-shadow: 0 0 20px #0aafe6;
+}
+
+/* style of binary clock */
+#clock_wrapper.neon #dw_clock_object .clock_time.binary .dial {
+  background-color: #d9ecff;
+}
+
+/* end of css/style.css */

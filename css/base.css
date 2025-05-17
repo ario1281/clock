@@ -1,0 +1,44 @@
+* {
+    position: relative;
+    padding: 0;
+    margin: 0;
+}
+
+/**
+ * all selector
+**/
+body {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+body>* {
+    display: inherit;
+}
+
+.container {
+    flex-direction: row;
+}
+
+
+/* "column" or "row" */
+[class*="column"] {
+    display: flex;
+    flex-direction: column;
+}
+[class*="row"] {
+    display: flex;
+    flex-direction: row;
+}
+
+
+/* left, right, center alignment */
+[class*="left"] {
+    margin-right: auto !important;
+}
+[class*="right"] {
+    margin-left: auto !important;
+}
+[class*="center"] {
+    margin: auto !important;
+}
