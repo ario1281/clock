@@ -1,4 +1,4 @@
-
+import { api_handler } from "./api_handler.js";
 
 async function hander(request) {
   const { pathName, searchParams } = new URL(request.url);
