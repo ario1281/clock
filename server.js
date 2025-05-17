@@ -1,6 +1,6 @@
 import { api_handler } from "./api_handler.js";
 
-async function hander(request) {
+async function handler(request) {
   const { pathName, searchParams } = new URL(request.url);
   console.log({ pathName, searchParams: [...searchParams.entries()] });
 
