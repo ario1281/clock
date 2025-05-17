@@ -1,0 +1,6 @@
+{
+  "redirects": [
+    { "source": "/api", "destination": "https://clock.deno.dev/api" },
+    { "source": "/", "destination": "https://clock.deno.dev" }
+  ]
+}
