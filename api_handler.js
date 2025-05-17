@@ -25,7 +25,7 @@ export function api_handler(searchParams) {
     Svg.render({}),
     {
       status: 200,
-      headers: api_headers.,
+      headers: api_headers,
     }
   );
 };
