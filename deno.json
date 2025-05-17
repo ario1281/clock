@@ -1,0 +1,9 @@
+{
+  "imports": {
+    "@std/assert": "jsr:@std/assert@^1.0.0",
+    "chalk": "npm:chalk@5"
+  },
+  "tasks" : {
+    "ci": "deno task lint && deno task fmt --check && deno task test"
+  }
+}
