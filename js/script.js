@@ -97,7 +97,7 @@ class dwClock {
     }
 };
 
-window.addEventListener('load', () => {
+addEventListener('load', () => {
 
     // 'dwClock' inherited class
     class dwClock_Analog extends dwClock {
