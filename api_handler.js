@@ -3,7 +3,7 @@ const CACHE_MAX_AGE = 7200;
 
 export const api_headers = new Headers({
   "Content-Type": "image/xml",
-  "Cache-Control" `public, max-age=${CACHE_MAX_AGE}`
+  "Cache-Control": `public, max-age=${CACHE_MAX_AGE}`
 });
 
 export function api_handler(searchParams) {
