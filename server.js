@@ -15,3 +15,7 @@ async function hander(request) {
     statusText: "Not Found",
   });
 }
+
+Deno.serve(async (request) => {
+  return await handler(request);
+});
