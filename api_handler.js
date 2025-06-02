@@ -1,3 +1,5 @@
+import { CustomURLSearchParams } from "./custom_url_search_params.js";
+import { Svg } from "./svg.js";
 
 const CACHE_MAX_AGE = 7200;
 
